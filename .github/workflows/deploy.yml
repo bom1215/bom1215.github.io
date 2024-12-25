@@ -23,10 +23,12 @@ jobs:
       # 3. 의존성 설치
       - name: Install dependencies
         run: npm install
+        working-directory: ./my-portfolio
 
       # 4. 빌드 실행
       - name: Build the project
         run: npm run build
+        working-directory: ./my-portfolio
 
       # 5. GitHub Pages 배포
       - name: Deploy to GitHub Pages
