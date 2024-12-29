@@ -12,7 +12,7 @@ import convertMd from '../utils/mdToHtml'
 const htmlContent = ref('')
 
 onMounted(async () => {
-    const response = await convertMd('../public/aboutMe.md')
+    const response = await convertMd('/about/aboutMe.md')
     htmlContent.value = response
 })
 </script>
