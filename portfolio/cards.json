@@ -2,7 +2,7 @@
   {
     "id": 1,
     "title": "Text Readability Prediction with Transformers",
-    "image": "./images/_portfolio/livingLabLogo.svg",
+    "image": "../images/_portfolio/livingLabLogo.svg",
     "highlights": [
       "developed a comprehensive PyTorch / HuggingFace text classification pipeline",
       "build multiple transformers including BERT and RoBERTa with custom pooling layers",
