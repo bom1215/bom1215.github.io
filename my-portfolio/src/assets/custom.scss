@@ -1,0 +1,10 @@
+$container-max-widths: (
+    sm: 540px,
+    md: 720px,
+    lg: 960px,
+    xl: 950px,
+    xxl: 1000px
+);
+
+// Bootstrap 소스 컴파일
+@import 'bootstrap/scss/bootstrap';
