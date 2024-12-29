@@ -1,0 +1,65 @@
+[
+  {
+    "id": 1,
+    "title": "Text Readability Prediction with Transformers",
+    "image": "../src/assets/images/livingLabLogo.svg",
+    "highlights": [
+      "developed a comprehensive PyTorch / HuggingFace text classification pipeline",
+      "build multiple transformers including BERT and RoBERTa with custom pooling layers",
+      "implemented an interactive web app for custom text reading complexity estimation"
+    ],
+    "tags": [
+      "natural language processing",
+      "deep learning",
+      "web app"
+    ],
+    "links": {
+      "read_more": "#",
+      "github_repo": "https://github.com/example1",
+      "web_app": "https://webapp.com/example1",
+      "blog_post": "https://blogpost.com/example1"
+    }
+  },
+  {
+    "id": 2,
+    "title": "Image Classification with CNNs",
+    "image": "/path/to/image2.jpg",
+    "highlights": [
+      "designed a custom CNN architecture for image classification",
+      "achieved 95% accuracy on CIFAR-10 dataset",
+      "implemented data augmentation for improving model generalization"
+    ],
+    "tags": [
+      "computer vision",
+      "deep learning",
+      "image classification"
+    ],
+    "links": {
+      "read_more": "#",
+      "github_repo": "https://github.com/example2",
+      "web_app": "https://webapp.com/example2",
+      "blog_post": "https://blogpost.com/example2"
+    }
+  },
+  {
+    "id": 3,
+    "title": "Speech Recognition with Transformers",
+    "image": "/path/to/image3.jpg",
+    "highlights": [
+      "developed a transformer-based ASR model using Wav2Vec2",
+      "trained on LibriSpeech dataset with 90% WER improvement",
+      "integrated real-time transcription in a web application"
+    ],
+    "tags": [
+      "speech recognition",
+      "transformers",
+      "web app"
+    ],
+    "links": {
+      "read_more": "#",
+      "github_repo": "https://github.com/example3",
+      "web_app": "https://webapp.com/example3",
+      "blog_post": "https://blogpost.com/example3"
+    }
+  }
+]
