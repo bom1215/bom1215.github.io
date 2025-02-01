@@ -11,9 +11,9 @@
                 <BDropdownItem>EN</BDropdownItem>
                 <BDropdownItem disabled>KR</BDropdownItem>
             </BDropdown>
-            <router-link to="/about" class="nav-link">About</router-link>
-            <router-link to="/portfolio" class="nav-link">Portfolio</router-link>
-            <router-link to="/post" class="nav-link">Post</router-link>
+            <RouterLink to="/about" class="nav-link">About</RouterLink>
+            <RouterLink to="/portfolio" class="nav-link">Portfolio</RouterLink>
+            <RouterLink to="/post" class="nav-link">Post</RouterLink>
         </ul>
     </header>
 </div>
