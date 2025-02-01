@@ -1,1 +1,0 @@
-import{_ as t}from"./Footer-qPVbh72I.js";import{_ as c}from"./Header-DNVOr4qT.js";import{_,c as s,a as o,F as r,o as a}from"./index-C6kp69Dd.js";const m={};function p(l,i){const n=c,e=t;return a(),s(r,null,[o(n,{class:"container"}),o(e,{class:"container"})],64)}const g=_(m,[["render",p]]);export{g as default};
