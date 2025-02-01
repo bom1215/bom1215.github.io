@@ -21,16 +21,18 @@ onMounted(async () => {
 <Header class="container" />
 
 <body class="container">
-    <div class="row">
-        <div class="col">
-            <img src="../assets/images/presentation2.jpg" class="img-fluid equal-height" alt="presentation image">
+    <div class="d-flex flex-column gap-5">
+        <div class="row justify-content-evenly flex-nowrap">
+            <div class="col-auto">
+                <img src="../assets/images/presentation2.jpg" class="img-fluid img-thumbnail" alt="presentation image">
+            </div>
+            <div class="col-auto">
+                <img src="../assets/images/livingLab.jpg" class="img-fluid img-thumbnail" alt="livingLab image">
+            </div>
         </div>
-        <div class="col">
-        <img src="../assets/images/livingLab.jpg" class="img-fluid equal-height" alt="livingLab image">
+        <div>
+            <div v-html="htmlContent"></div>
         </div>
-    </div>
-    <div>
-        <div v-html="htmlContent"></div>
     </div>
 </body>
 <Footer class="container" />
@@ -39,10 +41,7 @@ onMounted(async () => {
 <style scoped>
 .img-fluid {
     max-height: 500px;
-    object-fit: cover; /* 이미지가 영역을 채우면서 왜곡되지 않도록 설정 */
-}
-
-.equal-height {
-    height: 400px; /* 동일한 높이 설정 */
+    object-fit: cover;
+    height: 450px; /*최대 높이 설정*/
 }
 </style>
