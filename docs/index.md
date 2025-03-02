@@ -7,14 +7,14 @@ hero:
   # text: "blog"
   tagline: Software Engineer
   image:
-    src: profile.jpg
+    src: /profile.jpg
     alt: VitePress
     style: "border-radius: 50%;"
 
   actions:
     - theme: brand
       text: Blog posts
-      link: /markdown-examples
+      link: /posts/1/content
     # - theme: alt
     #   text: API Examples
     #   link: /api-examples
