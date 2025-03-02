@@ -7,7 +7,7 @@ hero:
   # text: "blog"
   tagline: Software Engineer
   image:
-    src: /profile.jpg
+    src: profile.jpg
     alt: VitePress
     style: "border-radius: 50%;"
 
@@ -15,9 +15,9 @@ hero:
     - theme: brand
       text: Blog posts
       link: /markdown-examples
-    - theme: alt
-      text: API Examples
-      link: /api-examples
+    # - theme: alt
+    #   text: API Examples
+    #   link: /api-examples
 
 # features:
 #   - icon: 🛠️
