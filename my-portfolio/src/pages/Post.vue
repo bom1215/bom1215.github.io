@@ -33,10 +33,11 @@ onMounted(async () => {
     <p class="spacing"><em>{{ post.description }}</em></p>
     <small>{{ post.date }}</small>
     <div v-html="htmlContent"></div>
+<Footer class="container" />
+
 </div>
 
 
-<Footer class="container" />
 </template>
 <style>
 .spacing {

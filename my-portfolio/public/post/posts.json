@@ -1,42 +1,10 @@
 [
   {
     "id": 0,
-    "title": "Example title 1",
-    "description": "This is the first example description for a post object, showcasing how properties can be passed as props.",
-    "date": "Jan 5, 2025",
-    "postPath": "/about/aboutMe.md",
-    "imagePath": "/images/portfolio/livingLabLogo.svg"
-  },
-  {
-    "id": 1,
-    "title": "Example title 2",
-    "description": "This is the second example description, providing more insights on how v-bind works with post objects.",
-    "date": "Jan 10, 2025",
-    "postPath": "/posts/examplePost2.md",
-    "imagePath": "/images/portfolio/example2.svg"
-  },
-  {
-    "id": 2,
-    "title": "Example title 3",
-    "description": "Here is the third example description, which focuses on dynamic rendering of posts using Vue.js.",
-    "date": "Jan 15, 2025",
-    "postPath": "/posts/examplePost3.md",
-    "imagePath": "/images/portfolio/example3.svg"
-  },
-  {
-    "id": 3,
-    "title": "Example title 4",
-    "description": "This fourth example highlights the benefits of using modular components for better code management.",
-    "date": "Jan 20, 2025",
-    "postPath": "/posts/examplePost4.md",
-    "imagePath": "/images/portfolio/example4.svg"
-  },
-  {
-    "id": 4,
-    "title": "Example title 5",
-    "description": "The final example demonstrates how to link post data with router-based navigation in Vue.",
-    "date": "Jan 25, 2025",
-    "postPath": "/posts/examplePost5.md",
-    "imagePath": "/images/portfolio/example5.svg"
+    "title": "Can numerical differentiation replace backpropagation in a Multilayer Perceptron (MLP)?",
+    "description": "Classifying handwritten digits with using numerical differentiation",
+    "date": "Mar 2, 2025",
+    "postPath": "dist/post/1/content.md",
+    "imagePath": "dist/post/1/image_0.png"
   }
 ]
