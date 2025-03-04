@@ -34,4 +34,4 @@ This website showcases my projects and blog posts.
 ---
 # Contact
 
-Feel free to contact me via [**email**](g4012s@gmail.com) or [**LinkedIn DM**](https://www.linkedin.com/in/tbeom15/). 
+Feel free to contact me via [**email**](mailto:g4012s@gmail.com) or [**LinkedIn DM**](https://www.linkedin.com/in/tbeom15/). 
