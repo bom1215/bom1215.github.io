@@ -1,4 +1,7 @@
-# Introduction
+
+# Can numerical differentiation replace backpropagation in a Multilayer Perceptron(MLP)?
+
+## Introduction
 
 Is it possible to build a deep learning model without using the backpropagation algorithm?
 
@@ -9,7 +12,7 @@ Before we start building the model, there are a few prerequisites:
 - First, as this post is about building deep learning models from scratch, I will only use **Python**, **Numpy**, and **Matplotlib**.
 - Second, I will not dive deep into the mathematics or algorithms behind the concepts.
 
-# **What is back propagation?**
+## **What is back propagation?**
 
 In machine learning, [backpropagation](https://en.wikipedia.org/wiki/Backpropagation) is a gradient estimation method commonly used for training neural networks to compute parameter updates. (from Wiki) It relies on the [chain rule](https://en.wikipedia.org/wiki/Chain_rule). The goal of backpropagation is to update the weights and biases used in the forward pass. When weights and biases are well trained, the model's accuracy increases. To update these parameters, we need to calculate the gradients of each weight and bias because the gradient indicates how much each parameter contributed to the difference between the predicted output and the actual output, also known as the error.
 
@@ -20,7 +23,7 @@ Once we know the error, we have two options:
 
 For this implementation, we’ll focus on the second approach, **numerical differentiation**.
 
-# What is numerical differentiation
+## What is numerical differentiation
 
 You may remember the definition of a derivative from high school:
 
@@ -31,11 +34,11 @@ $$
 - **h**: A very small number
 - By taking the limit as **h** approaches zero, we can find the instantaneous rate of change at a point.
 
-## Numerical Differentiation
+### Numerical Differentiation
 
 In the real world, it is challenging to compute derivatives exactly. Instead, we can use numerical differentiation.
 
-### Types of Numerical Differentiation:
+**Types of Numerical Differentiation:**
 
 - **Forward Difference**:
 
@@ -64,21 +67,21 @@ We will choose the **central difference** method because it is more accurate tha
 - $\frac{f(x+h) - f(x-h)}{2h}$  : Add above 2 numbers and divide into $2h$. It is the gradient of each parameter
 - Repeat these steps until all gradients of the parameters are calculated.
 
-# Let's Apply Our Idea to Code (feat. MNIST)
+## Let's Apply Our Idea to Code (feat. MNIST)
 
-## MNIST Dataset
+### MNIST Dataset
 
 - The MNIST dataset is a collection of handwritten digits, consisting of 60,000 examples for training and 10,000 examples for testing.
 
 ![image.png](image_0.png)
 
-## Let’s train the model 🤖
+### Let’s train the model 🤖
 
 - The core concept of **numerical differentiation** is to compute the gradients (derivatives) of the loss function with respect to the model parameters (such as weights and biases) using numerical methods.
 - By adding and subtracting a very small number `h` (or a small vector or matrix) to each weight and bias, we compute the gradients.
 - You can imagine how many times you would have to compute the gradient for a single weight. For example, the shape of **W1** (weight) is (784, 50). To calculate the gradient of this weight, we add and subtract **h** to all elements of **W1**, which results in 39,200 calculations (784 x 50) for each weight matrix.
 
-### Code Snippet
+**Code Snippet**
 
 ```python
 def numerical_gradient(f, y_true, x_data, params, h=1e-4):
@@ -129,7 +132,7 @@ def numerical_gradient(f, y_true, x_data, params, h=1e-4):
 
 ```
 
-# Result
+## Result
 
 ### Prerequisites
 
@@ -141,11 +144,11 @@ def numerical_gradient(f, y_true, x_data, params, h=1e-4):
 - Loss function = Cross-Entropy Error
 - Activation function = Sigmoid
 
-## Loss
+### Loss
 
 ![image.png](image_1.png)
 
-## Test Accuracy
+### Test Accuracy
 
 ![image.png](image_2.png)
 
@@ -154,7 +157,7 @@ def numerical_gradient(f, y_true, x_data, params, h=1e-4):
 | **Backpropagation** | 100 | **3.1s** | 1.6676 | 0.6783 |
 | **Numerical Differentiation** | 100 | **141m 55.3s** | 1.5788 | 0.6309 |
 
-# Conclusion
+## Conclusion
 
 You can see how much time it takes to train a 2-layer model when using numerical differentiation to compute the loss gradients. This approach is **much slower** than backpropagation, but it gives an interesting perspective on how optimization works without the use of advanced optimization techniques.
 
