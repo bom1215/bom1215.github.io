@@ -28,8 +28,17 @@ const sharedThemeConfig = {
     "/{lang}/about/": [{ text: "About" }],
     "/{lang}/portfolio/": [
       {
-        text: "Visa assistant chatbot",
-        items: [{ text: "example", link: "{lang}/portfolio/woorinara" }],
+        text: "Woorinara chatbot",
+        items: [
+          {
+            text: "What is Woorinara?",
+            link: "{lang}/portfolio/woorinara/content",
+          },
+          {
+            text: "How to upgrade chatbot 1)",
+            link: "{lang}/portfolio/woorinara/content2",
+          },
+        ],
       },
     ],
     "/{lang}/posts/": [
@@ -59,7 +68,7 @@ const sharedThemeConfig = {
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   lang: "eng",
-  title: "Junbeom Lee",
+  title: "Junbeom.log",
   description: "hello",
   lastUpdated: true,
   locales: {
