@@ -66,6 +66,7 @@ export default defineConfig({
     root: {
       label: "English",
       lang: "en",
+      link: "/en/",
       themeConfig: replacePlaceholders(sharedThemeConfig, "en"),
     },
     kr: {
