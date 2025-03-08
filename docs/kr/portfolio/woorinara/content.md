@@ -69,7 +69,7 @@
 
 ## 성과
 
-**2024 오픈데이터포럼 공공데이터 활용 리빙랩 프로젝트 2등 (상금 700만원)**
+**2024 오픈데이터포럼 공공데이터 활용 리빙랩 프로젝트 2등 (상금 700만원)** 
 <div style="display: flex; gap: 20px;">
   <img src="/about/livingLab.jpg" width="300" /> 
 </div>
@@ -78,3 +78,4 @@
 
 - [앱 스토어](https://apps.apple.com/kr/app/woorinara/id6741319366?platform=iphone)
 - [카카오톡 채널](https://pf.kakao.com/_xlAxhxjn)
+- [관련 기사](https://www.itbiznews.com/news/articleView.html?idxno=153689)
