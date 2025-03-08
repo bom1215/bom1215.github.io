@@ -3,13 +3,13 @@
 layout: home
 
 hero:
-  name: "Junbeom Lee"
-  # text: "blog"
-  tagline: Software Engineer
+  name: Junbeom Lee
+  text: Enthusiast
+  tagline: "Software Engineer"
   image:
     src: /home/profile_new.jpg
     alt: VitePress
-    style: "border-radius: 50%;"
+    style: "border-radius: 35%;"
 
   actions:
     - theme: brand
