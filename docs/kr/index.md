@@ -7,7 +7,7 @@ hero:
   # text: "blog"
   tagline: Software Engineer
   image:
-    src: /profile.jpg
+    src: /home/profile_new.jpg
     alt: VitePress
     style: "border-radius: 50%;"
 
