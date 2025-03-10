@@ -2,36 +2,36 @@
 layout: doc
 ---
 
-<div style="display: flex; gap: 20px;">
-  <img src="/about/kyowon2.jpg" width="300" />
-  <img src="/about/livingLab.jpg" width="300" /> 
+<div style="display: flex; gap: 1%;">
+  <img src="/about/kyowon2.jpg" style="max-width: 50%; height: auto;" />
+  <img src="/about/livingLab.jpg" style="max-width: 50%; height: auto;" /> 
 </div>
 
 
----
-# About me
+## 안녕하세요
 
-Hello, I am **Junbeom Lee**👋.
+머신러닝과 데이터에 관심이 많은 **백엔드 엔지니어 이준범**입니다👋.
 
-I am a software developer specializing in Python backend engineering, with a strong interest in machine learning and data. 
+저에 대해 간단히 소개를 하자면,
 
-For three years, I worked as a teacher in South Korea while pursuing programming as a hobby.
-However, my dream of creating impactful services for people led me to leave teaching and pursue a career in software development.
-Recently, I moved to Montreal, Canada to realize my goal of becoming an engineer in North America. 
+한창 코로나가 시작되는 2021년 9월, **초등교사**로 발령 받아 아이들을 가르치기 시작했습니다. 
+그즈음 국내에 코딩 열풍이 불면서 저도 자연스레 코딩을 공부하게 되었습니다. 
+생각보다 코딩이 재밌어서 낮에는 수업하고 밤에는 코딩을 했습니다. 그리고 2024년에 저의 첫 서비스인 **공중 화장실 찾기 앱**을 만들어 출시했습니다. 시장 반응은 미지근했지만(?) 주변 친구들이 여행가서 화장실이 급할 때 사용했다는 소식을 간간히 들으며,
+제 마음 속에 많은 사람들이 사랑하는 서비스를 만들고 싶다는 열정이 생겼습니다.
 
-I am open to any opportunities where I can demonstrate my potential as a software engineer. 
+그리고 2025년 2월 **초등교사를 그만두었습니다.**
 
-Here is my [**Resume**](https://drive.google.com/file/d/1D8XSD4pxiQg8PPT66fUnIxx5Brg0v6-V/view?usp=sharing)
+현재 저는 **캐나다**에서 소프트웨어 엔지니어가 되기 위해 **몬트리올**에 이사왔습니다.
 
----
+*혹시 저의 개발이력이 궁금하시다면 **이력서**를 클릭해주세요!* 👉 [**Resume**](https://drive.google.com/file/d/1D8XSD4pxiQg8PPT66fUnIxx5Brg0v6-V/view?usp=sharing)
 
-# About this website
-This website showcases my projects and blog posts.
 
-- 📁 My portfolio includes projects related to AI and open-source contributions.
-- ✒️ My blog posts cover various topics, such as computer science, AI and personal journals.
+## 저의 블로그는
+제가 개발 공부하면서 기록한 글과 제가 참여한 프로젝트를 주로 게시했습니다.
 
----
-# Contact
+- 📁 **포트폴리오**는 주로 AI와 관련되서 제가 했던 프로젝트들이 정리되어 있습니다.
+- ✒️ **블로그 포스트**는 CS, AI, 딥러닝, 개인적인 기록까지 다양하게 작성해 놓았습니다.
 
-Feel free to contact me via [**email**](mailto:g4012s@gmail.com) or [**LinkedIn DM**](https://www.linkedin.com/in/tbeom15/). 
+## 연락처
+
+저와 가볍게 이야기를 나누고 싶으시면 [**이메일**](mailto:g4012s@gmail.com) 이나 [**링크드인 DM**](https://www.linkedin.com/in/tbeom15/)으로 연락 남겨주세요 
