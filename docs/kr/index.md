@@ -14,7 +14,7 @@ hero:
   actions:
     - theme: brand
       text: Blog posts
-      link: en/posts/1/content
+      link: kr/posts/1/content
     # - theme: alt
     #   text: API Examples
     #   link: /api-examples
