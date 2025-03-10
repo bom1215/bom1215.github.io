@@ -54,10 +54,6 @@ const sharedThemeConfig = {
     { icon: "github", link: "https://github.com/bom1215/" },
     { icon: "linkedin", link: "https://www.linkedin.com/in/tbeom15/" },
   ],
-  lastUpdated: {
-    text: "Last Updated",
-    formatOptions: { dateStyle: "full", timeStyle: "medium" },
-  },
   footer: {
     message: "Released under the MIT License.",
     copyright: "Copyright © 2025-Present Junbeom Lee",
@@ -70,7 +66,6 @@ export default defineConfig({
   lang: "eng",
   title: "Junbeom.log",
   description: "hello",
-  lastUpdated: true,
   locales: {
     root: {
       label: "English",
@@ -79,13 +74,25 @@ export default defineConfig({
       themeConfig: replacePlaceholders(sharedThemeConfig, "en"),
     },
     kr: {
-      label: "Korean",
+      label: "한국어",
       lang: "kr",
       link: "/kr/",
       themeConfig: replacePlaceholders(sharedThemeConfig, "kr"),
     },
   },
+
   markdown: {
     math: true,
+  },
+  lastUpdated: {
+    text: "Last Updated",
+    formatOptions: { dateStyle: "full", timeStyle: "medium" },
+  },
+  footer: {
+    message: "Released under the MIT License.",
+    copyright: "Copyright © 2025-Present Junbeom Lee",
+  },
+  search: {
+    provider: "local",
   },
 });
