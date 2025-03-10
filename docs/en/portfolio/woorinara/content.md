@@ -1,80 +1,86 @@
 # Woorinara Service
 
-**Woorinara** 는 한국에 거주하는 외국인들이 겪는 민원 처리 불편함을 해결하기 위해 만든 외국인 민원 도우미 애플리케이션이다.
+**Woorinara** is an application that provides information about administrative services for foreigners living in Korea.
 
 <video width="500" height="100" controls>
   <source src="/portfolio/woorinara/woorinara_video.mp4" type="video/mp4">
 </video>
 
 
-## 왜 만들게 되었는가
+## Why did we make Woorinara?
 
-### 불편한 점
+### Pain points
 
-- 외국인들이 비자 민원 관련 정보를 주로 인터넷에서 검색하지만 정부 공식 웹사이트가 영어로 번역은 되어있지만 최신화가 늦고 메뉴얼 등은 한글로 작성되어 접근이 어렵다.
-- 외국인 출입국 사무소에서 방문해서 민원 서류를 작성할 때 법률 용어 (연 소득 금액, 사업자 등록번호)가 있어 어려움을 겪는다.
-- 출입국 사무소 직원들이 한국어로만 응대하기에 외국인들이 쉽게 물어보기 어렵다.
+- Many foreigners struggle to understand the process and requirements of visa services. However, government websites do not update their English content frequently, and most details are only available in Korean.
+- When visiting an immigration office, they often have difficulty understanding legal terms on application forms.
+- Immigration officers usually speak only Korean, making it difficult to ask questions.
 
-### 한국 거주 외국인들과 인터뷰
+### Interviews with Foreign Residents
 
-- *“출입국사무소 방문 시 준비서류 안내가 잘 안되어있어 굉장히 혼란스러웠어요” (Brendom, 미국)*
-- *“출입국사무소 직원들이 빠르게 한국어로 응대해서 패닉이었어요.” (Anahi, 아르헨티나)*
-- *“통합신청서 작성할 때 안내가 미흡해서 헷갈려요. 다시 작성하라고 안내 받은적도 많았어요.” (Aylin, 독일)*
+>- *“I was confused when I visited the immigration office because I didn’t know which documents to bring.” (Brendon, USA)*   
+>- *“The staff at the immigration office speak only Korean, and they speak very fast.” (Anahi, Argentina)*   
+>- *“I was rejected many times because I filled out the forms incorrectly before submitting them.” (Aylin, Germany)*
 
-### 서비스 타겟 포인트
+## What Woorinara help you
 
-- **AI 챗봇** - 외국인 민원 서비스 관련 정보를 자유롭게 질문 가능.
-- **커뮤니티** - 외국인들이 행정 민원관련 경험 후기나 팁 등을 서로 공유
-- **신청서 번역 및 자동완성** - 출입국 사무소에 비치된 서류를 5개국어로 번역 및 앱 사용자 정보를 바탕으로 자동 완성해 제공.
+- **AI Chatbot** - Free to ask about administrative services for foreigners.
+- **Forum** - Share tips and experiences related to civil services.
+- **Translation and Form Examples** - Provide translations of immigration office documents and auto-completes forms based on user information.
 
-## 팀원 소개 및 나의 역할
+## Roles and Responsibilities
 
-### 팀원 수 (7명)
+### My role : AI Engineer
 
-- 기획, 마케팅 - 3명
-- 개발자 4명 - 백엔드 1명, 프론트엔드 (IOS) 1명, AI 2명
+- Developed the AI chatbot
+    - Crawled and processed data from government websites and loaded it into a database
+    - Designed the RAG (Retrieval-Augmented Generation) chatbot architecture
+    - Improved chatbot performance using user data
+- Technologies Used: : Python, FastAPI, PostgreSQL, Qdrant, LangChain, OpenAI API, Docker, AWS Lambda
 
-### 나의 역할
+### Team member (7 people)
 
-- AI 챗봇 개발 총괄
-    - 정부 공식 사이트 및 메뉴얼 자료에서 데이터 수집 및 전처리
-    - RAG 아키텍처 클라우드 구축
-    - 사용자 대화 정보 수집 및  성능 개선
+- Product Manager, Marketer, Designer
+- Backend Developer, Frontend Developer (iOS), 2 AI Engineers
 
-## AI 챗봇 기능
+## About the AI Chatbot
 
-- 외국인 비자 관련 행정서비스 정보를 제공
-    - 비자 신청, 연장, 변경, 체류지 이전 신고 등
-- 사용자 위치 기반 외국인 행정 기관 안내
-    - 출입국 관리사무소
-    - 무인민원발급기
-    - 민원대행사무소
+- Provides information about administrative services for foreigners, including:
+    - Visa applications, extensions, changes, and residence modifications
+- Offers location-based guidance for government agencies, including:
+    - Immigration offices
+    - Self-Service Civil Document Kiosks
+    - Foreign Civil Affairs Agencies
 
-### 아키텍처
+### Architecture
 
 ![image.png](/portfolio/woorinara/woorinara_architecture.png)
 
-사용자 질문 → 백엔드 서버에서 사용자 확인 및 메시지 전달 → AI서버 답변 생성 및 백엔드 서버에 전달 → 사용자 대답 확인
+- Client: Asks a question 
+- Backend: Verifies user ID & sends it to AI 
+-  AI: Generates an answer 
+-  Backend: Sends the answer back 
+- Client: Receives & checks it
 
-#### RAG (Retrieval-Augmented Generation) 기반 챗봇
+#### RAG (Retrieval-Augmented Generation) Chatbot
 
-- 사용자 질문과 관련 된 정보를 외부 데이터베이스에서 검색을 해서 LLM에게 문맥을 제공하여 답변의 품질을 향상
-- 외부 데이터베이스
-    - 위치 안내  → RDB에서 검색해서 위치 데이터 추출
-    - 민원 안내  → Vectorstore에서 비자 민원 관련 데이터 추출
-- 챗봇을 만들며 겪고 해결한 문제
-    - 응답 속도 최적화
-    - 응답의 정확성
-    - 카카오톡 채널에 챗봇 도입하기
+- Retrieves relevant information from the database and provides it to the LLM (Large Language Model) as context for the user's question.
+- External Databases:
+    - Location guide  → Extracts location data from a relational database (PostgreSQL).
+    - Common Questions  → Retrieves civil service data from a vector database (Qdrant).
+- Challenges:
+    - Reducing response time
+    - Improving chatbot accuracy
+    - Integrating the chatbot with KakaoTalk
 
-## 성과
+## Acomplishments
 
-**2024 오픈데이터포럼 공공데이터 활용 리빙랩 프로젝트 2등 (상금 700만원)**
+> **🏆 [2nd Prize] Won funding in the Data Usage Competition**   
+*Issued by Korean National Information Society Agency (NIA) · Dec 2024*
 <div style="display: flex; gap: 20px;">
   <img src="/about/livingLab.jpg" width="300" /> 
 </div>
 
-## 참고
+## Resources
 
-- [앱 스토어](https://apps.apple.com/kr/app/woorinara/id6741319366?platform=iphone)
-- [카카오톡 채널](https://pf.kakao.com/_xlAxhxjn)
+- [App store](https://apps.apple.com/kr/app/woorinara/id6741319366?platform=iphone)
+- [Kakaotalk](https://pf.kakao.com/_xlAxhxjn)
