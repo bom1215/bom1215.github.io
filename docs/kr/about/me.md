@@ -1,5 +1,9 @@
 ---
 layout: doc
+prev: false
+next:   
+  text: '포트폴리오'
+  link: 'kr/portfolio/woorinara/content'
 ---
 
 <div style="display: flex; gap: 1%;">

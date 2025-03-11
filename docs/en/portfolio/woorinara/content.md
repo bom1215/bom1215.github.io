@@ -1,3 +1,8 @@
+---
+next:
+  text: 'Reduce response time'
+  link: 'en/portfolio/woorinara/content2'
+---
 # Woorinara Service
 
 **Woorinara** is an application that provides information about administrative services for foreigners living in Korea.

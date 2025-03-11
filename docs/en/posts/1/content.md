@@ -1,4 +1,7 @@
-
+---
+prev: false
+next: false
+---
 # Can numerical differentiation replace backpropagation in a Multilayer Perceptron(MLP)?
 
 ## Introduction

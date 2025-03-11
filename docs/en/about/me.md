@@ -1,5 +1,9 @@
 ---
 layout: doc
+prev: false
+next:   
+  text: 'Portfolio'
+  link: 'en/portfolio/woorinara/content'
 ---
 
 <div style="display: flex; gap: 1%;">
@@ -21,15 +25,12 @@ I am open to any opportunities where I can demonstrate my potential as a softwar
 
 Here is my [**Resume**](https://drive.google.com/file/d/1D8XSD4pxiQg8PPT66fUnIxx5Brg0v6-V/view?usp=sharing)
 
----
-
 ## About this website
 This website showcases my projects and blog posts.
 
 - 📁 My portfolio includes projects related to AI and open-source contributions.
 - ✒️ My blog posts cover various topics, such as computer science, AI and personal journals.
 
----
 ## Contact
 
 Feel free to contact me via [**email**](mailto:g4012s@gmail.com) or [**LinkedIn DM**](https://www.linkedin.com/in/tbeom15/). 

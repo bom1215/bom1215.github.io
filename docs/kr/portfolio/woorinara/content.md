@@ -1,3 +1,8 @@
+---
+next:
+  text: '챗봇 응답 시간 줄이기'
+  link: 'kr/portfolio/woorinara/content2'
+---
 # Woorinara Service
 
 **Woorinara** 는 한국에 거주하는 외국인들이 겪는 민원 처리 불편함을 해결하기 위해 만든 외국인 민원 도우미 애플리케이션이다.
