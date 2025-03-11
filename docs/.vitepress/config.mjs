@@ -35,7 +35,7 @@ const sharedThemeConfig = {
             link: "{lang}/portfolio/woorinara/content",
           },
           {
-            text: "How to upgrade chatbot 1)",
+            text: "Response Time",
             link: "{lang}/portfolio/woorinara/content2",
           },
         ],
