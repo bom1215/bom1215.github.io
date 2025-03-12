@@ -95,4 +95,7 @@ export default defineConfig({
   search: {
     provider: "local",
   },
+  sitemap: {
+    hostname: "https://bom1215.github.io/",
+  },
 });
