@@ -4,20 +4,20 @@ layout: home
 
 hero:
   name: Junbeom Lee
-  text: Backend Engineer
-  tagline: " "
+  text: Enthusiast
+  tagline: "Software Engineer"
   image:
     src: /home/profile_new.jpg
     alt: VitePress
     style: "border-radius: 35%;"
 
-  # actions:
-  # - theme: brand
-  # text: Blog posts
-  # link: en/posts/1/content
-  # - theme: alt
-  #   text: API Examples
-  #   link: /api-examples
+  actions:
+    - theme: brand
+      text: Blog posts
+      link: en/posts/1/content
+    # - theme: alt
+    #   text: API Examples
+    #   link: /api-examples
 # features:
 #   - icon: 🛠️
 #     title: Simple and minimal, always
@@ -30,8 +30,21 @@ hero:
 #     details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
 ---
 
-<Home />
+<script setup>
+import { ref } from 'vue'
 
-<script setup lang="ts">
-import Home from "../home.vue"
+const count = ref(0)
 </script>
+
+## Markdown Content
+
+The count is: {{ count }}
+
+<button :class="$style.button" @click="count++">Increment</button>
+
+<style module>
+.button {
+  color: red;
+  font-weight: bold;
+}
+</style>

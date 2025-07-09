@@ -4,21 +4,20 @@ layout: home
 
 hero:
   name: Junbeom Lee
-  text: Enthusiast
-  tagline: "Software Engineer"
+  text: Backend Engineer
+  tagline: " "
   image:
     src: /home/profile_new.jpg
     alt: VitePress
     style: "border-radius: 35%;"
 
-  actions:
-    - theme: brand
-      text: Blog posts
-      link: kr/posts/1/content
-    # - theme: alt
-    #   text: API Examples
-    #   link: /api-examples
-
+  # actions:
+  # - theme: brand
+  # text: Blog posts
+  # link: en/posts/1/content
+  # - theme: alt
+  #   text: API Examples
+  #   link: /api-examples
 # features:
 #   - icon: 🛠️
 #     title: Simple and minimal, always
@@ -31,4 +30,8 @@ hero:
 #     details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
 ---
 
+<Home />
 
+<script setup lang="ts">
+import Home from "../home.vue"
+</script>

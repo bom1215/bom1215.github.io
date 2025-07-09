@@ -1,6 +1,15 @@
 {
   "devDependencies": {
+    "@vicons/antd": "^0.13.0",
+    "@vicons/carbon": "^0.13.0",
+    "@vicons/fa": "^0.13.0",
+    "@vicons/fluent": "^0.13.0",
+    "@vicons/ionicons4": "^0.13.0",
+    "@vicons/ionicons5": "^0.13.0",
+    "@vicons/material": "^0.13.0",
+    "@vicons/tabler": "^0.13.0",
     "markdown-it-mathjax3": "^4.3.2",
+    "naive-ui": "^2.42.0",
     "vitepress": "^1.6.3"
   },
   "scripts": {

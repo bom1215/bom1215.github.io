@@ -20,9 +20,9 @@ const replacePlaceholders = (obj, lang) => {
 const sharedThemeConfig = {
   nav: [
     { text: "Home", link: "/{lang}" },
-    { text: "About", link: "{lang}/about/me" },
+    // { text: "About", link: "{lang}/about/me" },
     { text: "Post", link: "{lang}/posts/1/content" },
-    { text: "Portfolio", link: "{lang}/portfolio/woorinara/content" },
+    // { text: "Portfolio", link: "{lang}/portfolio/woorinara/content" },
   ],
   sidebar: {
     "/{lang}/about/": [{ text: "About" }],
