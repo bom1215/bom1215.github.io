@@ -66,6 +66,11 @@ export default defineConfig({
   lang: "eng",
   title: "Junbeom.log",
   description: "hello",
+  vite: {
+    optimizeDeps: {
+      include: ["naive-ui"],
+    },
+  },
   locales: {
     root: {
       label: "English",
