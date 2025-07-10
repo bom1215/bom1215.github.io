@@ -17,7 +17,7 @@ const projects = [
     title: "Woorinara",
     content: "LLM Chatbot application specialized in Korean VISA",
     img: "/portfolio/woorinara/logo.svg",
-    serviceUrl: "https://apps.apple.com/us/app/woorinara/id6741319366?uo=4",
+    serviceLink:: "https://apps.apple.com/us/app/woorinara/id6741319366?uo=4",
     iframeSrc:
       "https://www.youtube.com/embed/rpjli4bFfv0?si=WBH0zMMofvqmpj8R&mute=1&autoplay=1&playsinline=1",
   },
@@ -25,7 +25,7 @@ const projects = [
     title: "ToiletKorea",
     content: "Application that shows public toilest nearby in Korea",
     img: "/portfolio/toiletKorea/logo.svg",
-    link: "https://play.google.com/store/apps/details?id=com.codeJP.toiletkorea&hl=en_CA",
+    serviceLink: "https://play.google.com/store/apps/details?id=com.codeJP.toiletkorea&hl=en_CA",
     iframeSrc: "",
   },
 ];
