@@ -1,39 +1,52 @@
 <script setup lang="ts">
+import { ref } from "vue";
 import { NCard, NFlex, NGradientText } from "naive-ui";
-
+import VideoModal from "./projectDetail.vue";
 const projects = [
   {
     title: "Nutribanner",
     content:
       "Chrome extension that shows nutrition, processing, environmental impact labels to food producsts on Canadian grocery websites",
     img: "/portfolio/nutribanner/nutriscore.svg",
-    serviceUrl:
+    serviceLink:
       "https://chromewebstore.google.com/detail/nutribanner/hhjijdgkgbpiaicjkeodipbhoefocnja",
-    videoURL: "https://youtu.be/RuyosdHKNRg",
+    iframeSrc:
+      "https://www.youtube.com/embed/RuyosdHKNRg?si=zk2SbJQ0McT_XgkQ/mute=1&cc_load_policy=1&autoplay=1&playsinline=1https://www.youtube.com/embed/RuyosdHKNRg?si=zk2SbJQ0McT_XgkQ&mute=1&cc_load_policy=1&autoplay=1&playsinline=1playsinline=1",
   },
   {
     title: "Woorinara",
     content: "LLM Chatbot application specialized in Korean VISA",
     img: "/portfolio/woorinara/logo.svg",
     serviceUrl: "https://apps.apple.com/us/app/woorinara/id6741319366?uo=4",
-    videoUrl: "https://youtu.be/rpjli4bFfv0",
+    iframeSrc:
+      "https://www.youtube.com/embed/rpjli4bFfv0?si=WBH0zMMofvqmpj8R&mute=1&autoplay=1&playsinline=1",
   },
   {
     title: "ToiletKorea",
     content: "Application that shows public toilest nearby in Korea",
     img: "/portfolio/toiletKorea/logo.svg",
     link: "https://play.google.com/store/apps/details?id=com.codeJP.toiletkorea&hl=en_CA",
-    videoUrl: "",
+    iframeSrc: "",
   },
 ];
-function openLink(url: string) {
-  window.location.href = url;
+const showModal = ref(false);
+const selectedProject = ref<(typeof projects)[0] | null>(null);
+
+function openVideoModal(project: (typeof projects)[0]) {
+  if (!project.iframeSrc) {
+    // iframeSrc가 없으면 모달 열지 말고 바로 링크로 이동
+    window.open(project.link || project.serviceLink, "_blank");
+    return;
+  }
+  selectedProject.value = project;
+  showModal.value = true;
 }
 </script>
 <template>
   <div style="text-align: center; line-height: 1.4">
     <n-gradient-text :size="40" type="info"> Projects </n-gradient-text>
   </div>
+  <project-detail />
 
   <n-flex justify="space-around" size="large">
     <n-card
@@ -42,7 +55,7 @@ function openLink(url: string) {
       :title="project.title"
       hoverable
       style="max-width: 300px"
-      @click="openLink(project.link)"
+      @click="openVideoModal(project)"
     >
       <template #cover>
         <img :src="project.img" class="project-img" alt="project image" />
@@ -50,6 +63,13 @@ function openLink(url: string) {
       {{ project.content }}
     </n-card>
   </n-flex>
+  <VideoModal
+    v-if="selectedProject"
+    v-model:show="showModal"
+    :title="selectedProject.title"
+    :iframeSrc="selectedProject.iframeSrc"
+    :buttonLink="selectedProject.serviceLink"
+  />
 </template>
 <style scoped>
 .project-img {
