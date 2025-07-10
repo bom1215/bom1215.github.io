@@ -68,10 +68,10 @@ export default defineConfig({
   description: "hello",
   vite: {
     optimizeDeps: {
-      include: ["naive-ui"],
+      include: ["naive-ui", "vueuc"],
     },
     ssr: {
-      noExternal: ["naive-ui"],
+      noExternal: ["naive-ui", "vueuc"],
     },
   },
   locales: {
