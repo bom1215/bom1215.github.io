@@ -7,19 +7,23 @@ const projects = [
     content:
       "Chrome extension that shows nutrition, processing, environmental impact labels to food producsts on Canadian grocery websites",
     img: "/portfolio/nutribanner/nutriscore.svg",
-    link: "https://chromewebstore.google.com/detail/nutribanner/hhjijdgkgbpiaicjkeodipbhoefocnja",
+    serviceUrl:
+      "https://chromewebstore.google.com/detail/nutribanner/hhjijdgkgbpiaicjkeodipbhoefocnja",
+    videoURL: "https://youtu.be/RuyosdHKNRg",
   },
   {
     title: "Woorinara",
     content: "LLM Chatbot application specialized in Korean VISA",
     img: "/portfolio/woorinara/logo.svg",
-    link: "https://apps.apple.com/us/app/woorinara/id6741319366?uo=4",
+    serviceUrl: "https://apps.apple.com/us/app/woorinara/id6741319366?uo=4",
+    videoUrl: "https://youtu.be/rpjli4bFfv0",
   },
   {
     title: "ToiletKorea",
     content: "Application that shows public toilest nearby in Korea",
     img: "/portfolio/toiletKorea/logo.svg",
     link: "https://play.google.com/store/apps/details?id=com.codeJP.toiletkorea&hl=en_CA",
+    videoUrl: "",
   },
 ];
 function openLink(url: string) {
