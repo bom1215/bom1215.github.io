@@ -70,6 +70,9 @@ export default defineConfig({
     optimizeDeps: {
       include: ["naive-ui"],
     },
+    ssr: {
+      noExternal: ["naive-ui"],
+    },
   },
   locales: {
     root: {
