@@ -1,13 +1,18 @@
 <script setup lang="ts">
 import { NFlex } from "naive-ui";
-// imports
-// import { useColorMode } from "vitepress";
 import { darkTheme, lightTheme, NConfigProvider } from "naive-ui";
-import { computed } from "vue";
+import { computed, ref, onMounted } from "vue";
 import { useData } from "vitepress";
+const mounted = ref(false);
 const { isDark } = useData();
 
-const theme = computed(() => (isDark.value ? darkTheme : lightTheme));
+onMounted(() => {
+  mounted.value = true;
+});
+
+const theme = computed(() =>
+  mounted.value ? (isDark.value ? darkTheme : lightTheme) : lightTheme
+);
 
 import about from "./component/about.vue";
 import skills from "./component/skills.vue";

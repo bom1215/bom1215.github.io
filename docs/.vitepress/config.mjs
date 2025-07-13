@@ -88,7 +88,7 @@ export default defineConfig({
     //   themeConfig: replacePlaceholders(sharedThemeConfig, "kr"),
     // },
   },
-  appearance: "dark", // 다크 모드 고정
+  appearance: "dark", // 다크 모드 시작
   markdown: {
     math: true,
   },

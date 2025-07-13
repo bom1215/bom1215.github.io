@@ -132,9 +132,7 @@ const icons = {
             @click="openLink(link, name, project.title)"
           >
             <template #icon>
-              <NIcon>
-                <NIcon :component="icons[name]?.icon" />
-              </NIcon> </template
+              <NIcon :component="icons[name]?.icon" /> </template
             >{{ icons[name]?.name || name }}
           </n-button>
         </n-flex>
