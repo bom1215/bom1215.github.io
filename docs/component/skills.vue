@@ -41,7 +41,7 @@ const skills = [
         <n-row :gutter="[12, 8]">
           <n-col v-for="skill in skills" :key="skill.label" :span="6">
             <div class="skill-pane">
-              <n-image width="50" :src="skill.icon" />
+              <n-image width="50" :src="skill.icon" :preview-disabled="true" />
               <span>{{ skill.label }}</span>
             </div>
           </n-col>

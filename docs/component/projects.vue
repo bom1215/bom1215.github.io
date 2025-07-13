@@ -3,55 +3,109 @@ import { ref } from "vue";
 import { NCard, NFlex, NGradientText, NButton, NIcon, NTag } from "naive-ui";
 import VideoModal from "./projectDetail.vue";
 import { Github, Youtube } from "@vicons/fa";
-const projects = [
+import { IosLink } from "@vicons/ionicons4";
+interface ProjectLinks {
+  serviceLink: URL | null;
+  iframeSrc: URL | null;
+  github: URL | null;
+}
+
+interface Project {
+  title: string;
+  content: string;
+  img: string;
+  techStack: string[];
+  links: ProjectLinks;
+}
+const projects: Project[] = [
   {
     title: "Nutribanner",
     content:
       "Chrome extension that shows nutrition, processing, environmental impact labels to food producsts on Canadian grocery websites",
     img: "/portfolio/nutribanner/nutriscore.svg",
-    serviceLink:
-      "https://chromewebstore.google.com/detail/nutribanner/hhjijdgkgbpiaicjkeodipbhoefocnja",
-    iframeSrc:
-      "https://www.youtube.com/embed/RuyosdHKNRg?si=zk2SbJQ0McT_XgkQ/mute=1&cc_load_policy=1&autoplay=1&playsinline=1https://www.youtube.com/embed/RuyosdHKNRg?si=zk2SbJQ0McT_XgkQ&mute=1&cc_load_policy=1&autoplay=1&playsinline=1playsinline=1",
-    github: "https://github.com/bom1215/nutribanner",
-    techStack: ["Typescript", "Vuejs", "HTML", "CSS"],
+    techStack: ["Typescript", "VueJS", "HTML", "CSS"],
+    links: {
+      serviceLink: new URL(
+        "https://chromewebstore.google.com/detail/nutribanner/hhjijdgkgbpiaicjkeodipbhoefocnja"
+      ),
+      iframeSrc: new URL(
+        "https://www.youtube.com/embed/RuyosdHKNRg?si=zk2SbJQ0McT_XgkQ/mute=1&cc_load_policy=1&autoplay=1&playsinline=1https://www.youtube.com/embed/RuyosdHKNRg?si=zk2SbJQ0McT_XgkQ&mute=1&cc_load_policy=1&autoplay=1&playsinline=1playsinline=1"
+      ),
+      github: new URL("https://github.com/bom1215/nutribanner"),
+    },
   },
   {
     title: "Woorinara",
     content: "LLM Chatbot application specialized in Korean VISA",
     img: "/portfolio/woorinara/logo.svg",
-    serviceLink: "https://apps.apple.com/us/app/woorinara/id6741319366?uo=4",
-    iframeSrc:
-      "https://www.youtube.com/embed/rpjli4bFfv0?si=WBH0zMMofvqmpj8R&mute=1&autoplay=1&playsinline=1",
-    github: "https://github.com/bom1215/woorinara-chatbot-sample",
     techStack: ["Python", "FastAPI", "PostgreSQL", "Docker", "AWS"],
+    links: {
+      serviceLink: new URL(
+        "https://apps.apple.com/us/app/woorinara/id6741319366?uo=4"
+      ),
+      iframeSrc: new URL(
+        "https://www.youtube.com/embed/rpjli4bFfv0?si=WBH0zMMofvqmpj8R&mute=1&autoplay=1&playsinline=1"
+      ),
+      github: new URL("https://github.com/bom1215/woorinara-chatbot-sample"),
+    },
   },
   {
     title: "ToiletKorea",
     content: "Application that shows public toilet nearby in Korea",
     img: "/portfolio/toiletKorea/logo.svg",
-    serviceLink:
-      "https://play.google.com/store/apps/details?id=com.codeJP.toiletkorea&hl=en_CA",
-    iframeSrc: "",
-    github: "https://github.com/bom1215/ToiletKorea",
     techStack: ["Kotlin", "Android"],
+    links: {
+      serviceLink: new URL(
+        "https://play.google.com/store/apps/details?id=com.codeJP.toiletkorea&hl=en_CA"
+      ),
+      iframeSrc: null,
+      github: new URL("https://github.com/bom1215/ToiletKorea"),
+    },
   },
 ];
+type modal = {
+  title: string;
+  link: URL;
+};
 const showModal = ref(false);
-const selectedProject = ref<(typeof projects)[0] | null>(null);
-
-function openVideoModal(project: (typeof projects)[0]) {
-  if (!project.iframeSrc) {
-    // iframeSrc가 없으면 모달 열지 말고 바로 링크로 이동
-    window.open(project.serviceLink, "_blank");
+const selectedModal = ref<modal | null>(null);
+function openLink(link: URL | null, label: string, title: string) {
+  if (label == "iframeSrc" && link instanceof URL) {
+    showModal.value = true;
+    selectedModal.value = { title, link };
     return;
   }
-  selectedProject.value = project;
-  showModal.value = true;
+  if (link instanceof URL) {
+    window.open(link, "_blank");
+  }
 }
-function openWindow(link: Text) {
-  window.open(link, "_blank");
-}
+const icons = {
+  serviceLink: {
+    name: "Live APP",
+    icon: IosLink,
+  },
+  iframeSrc: {
+    name: "Video",
+    icon: Youtube,
+  },
+  github: {
+    name: "Github",
+    icon: Github,
+  },
+};
+
+// function openVideoModal(project: (typeof projects)[0]) {
+//   if (!project.iframeSrc) {
+//     // iframeSrc가 없으면 모달 열지 말고 바로 링크로 이동
+//     window.open(project.serviceLink, "_blank");
+//     return;
+//   }
+//   selectedProject.value = project;
+//   showModal.value = true;
+// }
+// function openWindow(link: URL) {
+//   window.open(link, "_blank");
+// }
 </script>
 <template>
   <div style="text-align: center; line-height: 1.4">
@@ -81,37 +135,28 @@ function openWindow(link: Text) {
       <template #action>
         <n-flex justify="space-around" size="small"
           ><n-button
+            v-for="(link, name) in project.links"
+            v-show="link"
+            :key="name"
             quaternary
             icon-placement="left"
-            @click="openVideoModal(project)"
+            @click="openLink(link, name, project.title)"
           >
             <template #icon>
               <NIcon>
-                <Youtube />
+                <NIcon :component="icons[name]?.icon" />
               </NIcon> </template
-            >Demo video
+            >{{ icons[name]?.name || name }}
           </n-button>
-          <n-button
-            quaternary
-            icon-placement="left"
-            @click="openWindow(project.github)"
-          >
-            <template #icon>
-              <NIcon>
-                <Github />
-              </NIcon> </template
-            >View Code
-          </n-button></n-flex
-        >
+        </n-flex>
       </template>
     </n-card>
   </n-flex>
   <VideoModal
-    v-if="selectedProject"
+    v-if="selectedModal"
     v-model:show="showModal"
-    :title="selectedProject.title"
-    :iframeSrc="selectedProject.iframeSrc"
-    :buttonLink="selectedProject.serviceLink"
+    :title="selectedModal.title"
+    :iframeSrc="selectedModal.link"
   />
 </template>
 <style scoped>

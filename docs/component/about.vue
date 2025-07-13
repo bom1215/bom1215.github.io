@@ -36,7 +36,7 @@ onBeforeUnmount(() => window.removeEventListener("resize", checkWidth));
     direction="horizontal"
     :default-size="0.4"
     style="max-height: 30rem"
-    disabled="true"
+    :disabled="true"
     v-if="!isMobile"
   >
     <template #1>
@@ -51,7 +51,7 @@ onBeforeUnmount(() => window.removeEventListener("resize", checkWidth));
         direction="vertical"
         :default-size="0.5"
         style="height: 30rem"
-        disabled="true"
+        :disabled="true"
       >
         <template #1>
           <div class="pane" style="margin: 1rem">
@@ -67,7 +67,7 @@ onBeforeUnmount(() => window.removeEventListener("resize", checkWidth));
           <n-split
             direction="horizontal"
             style="height: 100%; margin: 1rem; gap: 0.5rem"
-            disabled="true"
+            :disabled="true"
           >
             <template #1>
               <n-card content-style="padding: 2rem;">
@@ -115,7 +115,7 @@ onBeforeUnmount(() => window.removeEventListener("resize", checkWidth));
         <div class="pane">
           <div>
             <n-icon size="20">
-              <WorkTwotone />
+              <Person16Regular />
             </n-icon>
           </div>
           <n-gradient-text :size="24" type="info">

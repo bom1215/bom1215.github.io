@@ -81,14 +81,14 @@ export default defineConfig({
       link: "/en/",
       themeConfig: replacePlaceholders(sharedThemeConfig, "en"),
     },
-    kr: {
-      label: "한국어",
-      lang: "kr",
-      link: "/kr/",
-      themeConfig: replacePlaceholders(sharedThemeConfig, "kr"),
-    },
+    // kr: {
+    //   label: "한국어",
+    //   lang: "kr",
+    //   link: "/kr/",
+    //   themeConfig: replacePlaceholders(sharedThemeConfig, "kr"),
+    // },
   },
-  appearance: "force-dark", // 다크 모드 고정
+  appearance: "dark", // 다크 모드 고정
   markdown: {
     math: true,
   },

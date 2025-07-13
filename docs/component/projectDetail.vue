@@ -5,8 +5,7 @@ import { NButton, NModal } from "naive-ui";
 // 받아올 props 정의
 const props = defineProps<{
   title: string;
-  iframeSrc: string;
-  buttonLink: string;
+  iframeSrc: URL;
 }>();
 
 const showModal = ref(false);
@@ -41,11 +40,6 @@ const segmented = {
           allowfullscreen
         ></iframe>
       </div>
-
-      <!-- 버튼 -->
-      <n-button tag="a" :href="props.buttonLink" target="_blank">
-        🔗 Visit Service Page
-      </n-button>
     </div>
 
     <template #footer />
