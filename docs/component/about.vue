@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import { Person16Regular } from "@vicons/fluent";
+import { ComputerSharp } from "@vicons/material";
 import {
   NFlex,
   NSplit,
@@ -7,6 +9,7 @@ import {
   NIcon,
   NGrid,
   NGi,
+  NCard,
 } from "naive-ui";
 import { ref, onMounted, onBeforeUnmount } from "vue";
 
@@ -29,43 +32,58 @@ onMounted(() => {
 onBeforeUnmount(() => window.removeEventListener("resize", checkWidth));
 </script>
 <template>
-  <n-split direction="horizontal" style="height: 500px" v-if="!isMobile">
+  <n-split
+    direction="horizontal"
+    :default-size="0.4"
+    style="max-height: 30rem"
+    disabled="true"
+    v-if="!isMobile"
+  >
     <template #1>
-      <div class="pane">
-        <n-image
-          object-fit="contain"
-          :src="about.img"
-          style="width: 85%; height: 60%"
-        />
-      </div>
+      <n-image
+        object-fit="scale-down"
+        :src="about.img"
+        style="max-width: 100%; max-height: 100%"
+      />
     </template>
     <template #2>
-      <n-split direction="vertical" style="height: 400px">
+      <n-split
+        direction="vertical"
+        :default-size="0.5"
+        style="height: 30rem"
+        disabled="true"
+      >
         <template #1>
-          <div class="pane">
-            <n-gradient-text :size="24" type="info"> About me </n-gradient-text>
+          <div class="pane" style="margin: 1rem">
+            <n-gradient-text :size="24" type="info" style="margin-bottom: 1rem">
+              About me
+            </n-gradient-text>
             <div>
               {{ about.aboutMe }}
             </div>
           </div>
         </template>
         <template #2>
-          <n-split direction="horizontal" style="height: 100%">
+          <n-split
+            direction="horizontal"
+            style="height: 100%; margin: 1rem; gap: 0.5rem"
+            disabled="true"
+          >
             <template #1>
-              <div class="pane">
+              <n-card content-style="padding: 2rem;">
                 <div>
                   <n-icon size="20">
-                    <WorkTwotone />
+                    <Person16Regular />
                   </n-icon>
                 </div>
                 <n-gradient-text :size="24" type="info">
                   Experiences
                 </n-gradient-text>
                 <div>{{ about.experiences }}</div>
-              </div>
+              </n-card>
             </template>
             <template #2>
-              <div class="pane">
+              <n-card content-style="padding: 2rem;">
                 <div>
                   <n-icon size="20">
                     <ComputerSharp />
@@ -75,7 +93,7 @@ onBeforeUnmount(() => window.removeEventListener("resize", checkWidth));
                   Projects
                 </n-gradient-text>
                 <div>{{ about.prjects }}</div>
-              </div>
+              </n-card>
             </template>
           </n-split>
         </template>

@@ -17,46 +17,36 @@ import {
   NSpace,
   NButton,
 } from "naive-ui";
-import {
-  LogoPython,
-  LogoJavascript,
-  LogoHtml5,
-  LogoCss3,
-} from "@vicons/ionicons5";
-import { Aws, Docker } from "@vicons/fa";
-import { DatabasePostgresql } from "@vicons/carbon";
 
 const skills = [
-  { icon: LogoPython, label: "Python" },
-  { icon: LogoJavascript, label: "JavaScript" },
-  { icon: Aws, label: "AWS" },
-  { icon: Docker, label: "Docker" },
-  { icon: DatabasePostgresql, label: "PostgreSQL" },
-  { icon: LogoHtml5, label: "HTML" },
-  { icon: LogoCss3, label: "CSS" },
+  { icon: "/tech/python.svg", label: "Python" },
+  { icon: "/tech/typescript.svg", label: "TypeScript" },
+  { icon: "/tech/aws.svg", label: "AWS" },
+  { icon: "/tech/docker.svg", label: "Docker" },
+  { icon: "/tech/postgreSQL.svg", label: "PostgreSQL" },
+  { icon: "/tech/html.svg", label: "HTML" },
+  { icon: "/tech/css.svg", label: "CSS" },
+  { icon: "/tech/vuejs.svg", label: "vueJS" },
 ];
 </script>
 <template>
   <n-space vertical size="large">
+    <div style="text-align: center; line-height: 1.4">
+      <n-gradient-text :size="40" type="info">
+        Skills & Technologies
+      </n-gradient-text>
+    </div>
     <n-layout>
-      <n-layout-header>
-        <div style="text-align: center; line-height: 1.4">
-          <n-gradient-text :size="40" type="info">
-            Skills & Technologies
-          </n-gradient-text>
-        </div>
-      </n-layout-header>
-      <n-layout-content content-style="padding: 24px;">
+      <n-layout-content content-style="padding: 1%;">
         <n-row :gutter="[12, 8]">
           <n-col v-for="skill in skills" :key="skill.label" :span="6">
             <div class="skill-pane">
-              <n-icon size="3rem">
-                <component :is="skill.icon" />
-              </n-icon>
+              <n-image width="50" :src="skill.icon" />
               <span>{{ skill.label }}</span>
             </div>
           </n-col>
         </n-row>
+        <StackIcon name="react" />
       </n-layout-content>
     </n-layout>
   </n-space>
@@ -68,5 +58,6 @@ const skills = [
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  gap: 15%;
 }
 </style>

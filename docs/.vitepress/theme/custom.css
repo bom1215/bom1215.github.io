@@ -1,0 +1,16 @@
+:root {
+  --vp-home-hero-name-color: transparent;
+  --vp-home-hero-name-background: -webkit-linear-gradient(
+    120deg,
+    #bd34fe,
+    #41d1ff
+  );
+}
+
+/* 데스크탑에서만 적용 */
+@media (min-width: 960px) {
+  .VPHero {
+    margin-top: 0 !important;
+    padding-top: 150px !important; /* 원하는 값으로 조정 */
+  }
+}

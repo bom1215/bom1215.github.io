@@ -16,7 +16,7 @@ import contactMe from "./component/contactMe.vue";
 </script>
 <template>
   <n-config-provider :theme="darkTheme">
-    <n-flex vertical :size="30">
+    <n-flex vertical :size="50">
       <about />
       <skills />
       <projects />
