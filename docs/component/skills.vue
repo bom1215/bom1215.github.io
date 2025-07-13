@@ -30,12 +30,12 @@ const skills = [
 ];
 </script>
 <template>
+  <div style="text-align: center; line-height: 1.4">
+    <n-gradient-text type="info" style="font-size: 2rem">
+      Skills & Technologies
+    </n-gradient-text>
+  </div>
   <n-space vertical size="large">
-    <div style="text-align: center; line-height: 1.4">
-      <n-gradient-text :size="40" type="info">
-        Skills & Technologies
-      </n-gradient-text>
-    </div>
     <n-layout>
       <n-layout-content content-style="padding: 1%;">
         <n-row :gutter="[12, 8]">
@@ -53,7 +53,7 @@ const skills = [
 </template>
 <style>
 .skill-pane {
-  height: 108px;
+  height: 10rem;
   display: flex;
   justify-content: center;
   align-items: center;

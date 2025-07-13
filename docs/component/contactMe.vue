@@ -39,7 +39,9 @@ onMounted(() => {
   <form action="https://formsubmit.co/g4012s@gmail.com" method="POST">
     <n-card size="huge" hoverable :bordered="false">
       <div style="text-align: center">
-        <n-gradient-text :size="40" type="info"> Get in touch </n-gradient-text>
+        <n-gradient-text type="info" style="font-size: 2rem">
+          Get in touch
+        </n-gradient-text>
       </div>
 
       <n-space vertical>

@@ -19,6 +19,21 @@ interface Project {
 }
 const projects: Project[] = [
   {
+    title: "Woorinara",
+    content: "LLM Chatbot application specialized in Korean VISA",
+    img: "/portfolio/woorinara/logo.svg",
+    techStack: ["Python", "FastAPI", "PostgreSQL", "Docker", "AWS"],
+    links: {
+      serviceLink: new URL(
+        "https://apps.apple.com/us/app/woorinara/id6741319366?uo=4"
+      ),
+      iframeSrc: new URL(
+        "https://www.youtube.com/embed/rpjli4bFfv0?si=WBH0zMMofvqmpj8R&mute=1&autoplay=1&playsinline=1"
+      ),
+      github: new URL("https://github.com/bom1215/woorinara-chatbot-sample"),
+    },
+  },
+  {
     title: "Nutribanner",
     content:
       "Chrome extension that shows nutrition, processing, environmental impact labels to food producsts on Canadian grocery websites",
@@ -32,21 +47,6 @@ const projects: Project[] = [
         "https://www.youtube.com/embed/RuyosdHKNRg?si=zk2SbJQ0McT_XgkQ/mute=1&cc_load_policy=1&autoplay=1&playsinline=1https://www.youtube.com/embed/RuyosdHKNRg?si=zk2SbJQ0McT_XgkQ&mute=1&cc_load_policy=1&autoplay=1&playsinline=1playsinline=1"
       ),
       github: new URL("https://github.com/bom1215/nutribanner"),
-    },
-  },
-  {
-    title: "Woorinara",
-    content: "LLM Chatbot application specialized in Korean VISA",
-    img: "/portfolio/woorinara/logo.svg",
-    techStack: ["Python", "FastAPI", "PostgreSQL", "Docker", "AWS"],
-    links: {
-      serviceLink: new URL(
-        "https://apps.apple.com/us/app/woorinara/id6741319366?uo=4"
-      ),
-      iframeSrc: new URL(
-        "https://www.youtube.com/embed/rpjli4bFfv0?si=WBH0zMMofvqmpj8R&mute=1&autoplay=1&playsinline=1"
-      ),
-      github: new URL("https://github.com/bom1215/woorinara-chatbot-sample"),
     },
   },
   {
@@ -93,23 +93,12 @@ const icons = {
     icon: Github,
   },
 };
-
-// function openVideoModal(project: (typeof projects)[0]) {
-//   if (!project.iframeSrc) {
-//     // iframeSrc가 없으면 모달 열지 말고 바로 링크로 이동
-//     window.open(project.serviceLink, "_blank");
-//     return;
-//   }
-//   selectedProject.value = project;
-//   showModal.value = true;
-// }
-// function openWindow(link: URL) {
-//   window.open(link, "_blank");
-// }
 </script>
 <template>
   <div style="text-align: center; line-height: 1.4">
-    <n-gradient-text :size="40" type="info"> Projects </n-gradient-text>
+    <n-gradient-text type="info" style="font-size: 2rem">
+      Projects
+    </n-gradient-text>
   </div>
   <project-detail />
 
@@ -162,9 +151,13 @@ const icons = {
 <style scoped>
 .project-img {
   width: 100%;
-  height: 180px; /* 원하는 고정 높이 */
+  height: 14rem; /* 원하는 고정 높이 */
   object-fit: contain; /* 또는 cover */
-  padding: 12px; /* optional: 이미지가 너무 꽉 차면 여유 있게 */
+  padding: 1rem; /* optional: 이미지가 너무 꽉 차면 여유 있게 */
   box-sizing: border-box;
+  transition: transform 0.3s ease;
+}
+.project-img:hover {
+  transform: scale(1.05); /* 5% 확대 */
 }
 </style>

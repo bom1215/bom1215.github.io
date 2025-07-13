@@ -19,9 +19,9 @@ const replacePlaceholders = (obj, lang) => {
 // 공통 themeConfig 설정
 const sharedThemeConfig = {
   nav: [
-    { text: "Home", link: "/{lang}" },
+    // { text: "Home", link: "/{lang}" },
     // { text: "About", link: "{lang}/about/me" },
-    { text: "Post", link: "{lang}/posts/1/content" },
+    // { text: "Post", link: "{lang}/posts/1/content" },
     // { text: "Portfolio", link: "{lang}/portfolio/woorinara/content" },
   ],
   sidebar: {

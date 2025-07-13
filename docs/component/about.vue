@@ -55,7 +55,10 @@ onBeforeUnmount(() => window.removeEventListener("resize", checkWidth));
       >
         <template #1>
           <div class="pane" style="margin: 1rem">
-            <n-gradient-text :size="24" type="info" style="margin-bottom: 1rem">
+            <n-gradient-text
+              type="info"
+              style="margin-bottom: 1rem; font-size: 2rem"
+            >
               About me
             </n-gradient-text>
             <div>
@@ -76,7 +79,7 @@ onBeforeUnmount(() => window.removeEventListener("resize", checkWidth));
                     <Person16Regular />
                   </n-icon>
                 </div>
-                <n-gradient-text :size="24" type="info">
+                <n-gradient-text type="info" style="font-size: 1.5rem">
                   Experiences
                 </n-gradient-text>
                 <div>{{ about.experiences }}</div>
@@ -89,7 +92,7 @@ onBeforeUnmount(() => window.removeEventListener("resize", checkWidth));
                     <ComputerSharp />
                   </n-icon>
                 </div>
-                <n-gradient-text :size="24" type="info">
+                <n-gradient-text type="info" style="font-size: 1.5rem">
                   Projects
                 </n-gradient-text>
                 <div>{{ about.prjects }}</div>
@@ -105,7 +108,9 @@ onBeforeUnmount(() => window.removeEventListener("resize", checkWidth));
       <n-image object-fit="fill" :src="about.img" />
     </div>
     <div class="pane">
-      <n-gradient-text :size="24" type="info"> About me </n-gradient-text>
+      <n-gradient-text type="info" style="font-size: 2rem">
+        About me
+      </n-gradient-text>
       <div>
         {{ about.aboutMe }}
       </div>
@@ -118,7 +123,7 @@ onBeforeUnmount(() => window.removeEventListener("resize", checkWidth));
               <Person16Regular />
             </n-icon>
           </div>
-          <n-gradient-text :size="24" type="info">
+          <n-gradient-text type="info" style="font-size: 1.5rem">
             Experiences
           </n-gradient-text>
           <div>{{ about.experiences }}</div>
@@ -131,7 +136,9 @@ onBeforeUnmount(() => window.removeEventListener("resize", checkWidth));
               <ComputerSharp />
             </n-icon>
           </div>
-          <n-gradient-text :size="24" type="info"> Projects </n-gradient-text>
+          <n-gradient-text type="info" style="font-size: 1.5rem">
+            Projects
+          </n-gradient-text>
           <div>{{ about.prjects }}</div>
         </div>
       </n-gi>
